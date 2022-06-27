@@ -1,1 +1,102 @@
-Hello
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <title>氧化氢主页 - 一切是那么的简约高效</title>
+        <meta name="keywords" content="氧化氢主页,氧化氢工具箱"/>
+        <meta name="description" content="一切是那么的简约高效."/>
+        <link rel="shortcut icon" type="image/x-icon" href="/include/image/favicon.ico"/>
+        <!-- 引用css -->
+        <link rel="stylesheet" type="text/css" href="./include/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="./include/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="./include/css/font.css"/>
+    </head>
+    
+    <body>
+        <header id="header" class="header-tops">
+            <div class="container">
+                <h2>氧化氢</h2>
+                <h2><div class="jz ys" id="roll"></div></h2>
+                <nav class="nav-menu d-lg-block">
+                    <ul>
+                        <li class="active"><a href="#header">首页</a></li>
+                        <li><a href="#product">产品</a></li>
+                        <li><a href="https://tool.heroa.cn" target="_blank">工具</a></li>
+                        <li><a href="http://tool.heroa.cn/doc.php" target="_blank">API</a></li>
+                    </ul>
+                </nav>
+            
+                <div class="social-links">
+                    <a href="" class="qq" target="_blank"><i class="zm zm-qq"></i></a>
+                </div>
+            </div>
+        </header>
+        
+        <section id="product" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>产品</h2>
+                    <p>Product</p>
+                </div>
+                
+                <div class="row mt-2">
+                    <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3><a href="https://github.com/XiaoXinYo/H2O_Hyper_V" target="_blank">氧化氢Hyper-V</a></h3>
+                            <p>一款基于Python-Flask框架,开发的Hyper-V网页端管理程序.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mt-4 d-flex align-items-stretch">
+                        <div class="info-box">
+                            <i class="bx bx-envelope"></i>
+                            <h3>待定</h3>
+                            <p>待定</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- <div class="credits">
+            <a href="/">氧化氢</a>
+        </div> --> 
+        
+        <!-- 引用js -->
+        <script type="text/javascript" src="./include/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./include/js/main.js"></script>
+        <script type="text/javascript" src="./include/layer/layer.js"></script>
+        <script type="text/javascript">
+            var roll = function (r) {
+                function t() {
+                    return b[Math.floor(Math.random() * b.length)]
+                }
+                function e() {
+                    return String.fromCharCode(94 * Math.random() + 33)
+                }
+                function n(r) {
+                    for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+                        var l = document.createElement("span");
+                        l.textContent = e(), l.style.color = t(), n.appendChild(l)
+                    }
+                    return n
+                }
+                function i() {
+                    var t = o[c.skillI];
+                    c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+                }
+                var l = ""
+                    o = ["一切是那么的简约高效", "以不变应万变", "梦开始的地方"].map(function (r) {
+                        return r + ""
+                    }), a = 2, g = 1, s = 5, d = 75,
+                    b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+                    c = {text: "", prefixP: -s, skillI: 0, skillP: 0, direction: "forward", delay: a, step: g};
+                i()
+            };
+            roll(document.getElementById('roll'));
+        </script>
+    </body>
+</html>
